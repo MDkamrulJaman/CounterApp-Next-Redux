@@ -5,8 +5,8 @@ import MyPic from "../public/jaman.png";
 const About = () => {
   return (
     <>
-      <div className="about">
-        <div className="mypic">
+      <div className="about ">
+        <div>
           <Image src={MyPic} alt="Picture of the author" width={500} height={500} />
         </div>
         <div className="introduction">

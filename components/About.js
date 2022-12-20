@@ -21,6 +21,11 @@ const About = () => {
             <li>Redux</li>
             <li>MUI</li>
           </ul>
+          <h1>inspired By </h1>
+          <ul>
+            <li>Imran Vai</li>
+            <li>Emon vai</li>
+          </ul>
         </div>
       </div>
     </>

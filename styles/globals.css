@@ -1,0 +1,74 @@
+*{
+    padding-left: 5px;
+    padding-top: 2px;
+
+}
+
+.appName{
+
+color: blueviolet;
+font-size: x-large;
+font-weight: 900;
+text-align: center;
+}
+.countValue{
+
+  text-align: center;
+
+
+}
+
+.footer{
+
+  height: auto;
+  width: auto;
+text-align: center;
+bottom: 0;
+padding-left: 150px;
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+text-align: center;
+
+}
+
+.navbar {
+ 
+  font-size: x-large;
+  font-weight: 400;
+  
+}
+
+.navbar ul {
+  
+  
+  
+  display: flex; 
+  
+}
+
+.navbar ul li{
+  list-style-type: none;
+  
+  
+  
+}
+
+.about{
+
+   display: flex;
+   width: auto;
+   height: auto;
+}
+
+.introduction{
+
+font-size: large;
+font-weight: 700;
+font-family: sans-serif;
+height: auto;
+width: auto;
+
+}
+

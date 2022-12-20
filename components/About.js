@@ -13,7 +13,7 @@ const About = () => {
           <h1> FRONT END DEVELOPER</h1>
           <p>
             I have 3 years of experience building and desgining software. Currently,
-            <br /> I love to work on web application using technologies like
+            <br /> I love to work on web application using technologies like these
           </p>
           <ul>
             <li>React JS</li>

@@ -1,10 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import MyPic from "../public/jaman.png";
+import { Paper } from "@mui/material";
 
 const About = () => {
   return (
-    <>
+    <> 
+        <Paper elevation={5} variant="outlined" square>
       <div className="about ">
         <div>
           <Image src={MyPic} alt="Picture of the author" width={500} height={500} />
@@ -28,6 +30,8 @@ const About = () => {
           </ul>
         </div>
       </div>
+      </Paper>
+  
     </>
   );
 };

@@ -1,8 +1,4 @@
-*{
-    padding-left: 5px;
-    padding-top: 2px;
 
-}
 
 .appName{
 
@@ -33,27 +29,10 @@ text-align: center;
 
 }
 
-.navbar {
- 
-  font-size: x-large;
-  font-weight: 400;
-  
-}
 
-.navbar ul {
-  
-  
-  
-  display: flex; 
-  
-}
 
-.navbar ul li{
-  list-style-type: none;
   
   
-  
-}
 
 .about{
 
@@ -76,8 +55,12 @@ width: auto;
 
 }
 
-@media screen and (max-width: 600px) {
-  .about {
-    width: 50%;
-  }
+
+.link{
+
+ 
+  font-size: x-large;
+  text-align: center;
+  font-weight: 400;
+  text-decoration: none;
 }

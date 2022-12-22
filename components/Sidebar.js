@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 const pages = ["EXPRIENCE", "ABOUT", "CONTACT"];
-const DrawerComp = () => {
+const Sidebar = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   return (
@@ -42,4 +42,4 @@ const DrawerComp = () => {
   );
 };
 
-export default DrawerComp;
+export default Sidebar;

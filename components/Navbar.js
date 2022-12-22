@@ -10,7 +10,7 @@ import {
   useTheme,
 } from "@mui/material";
 import AddBusinessRoundedIcon from "@mui/icons-material/AddBusinessRounded";
-import Drawer from "../components/Drawer";
+import Drawer from "./Sidebar";
 
 const Navbar = () => {
   const [value, setValue] = useState();
@@ -22,10 +22,10 @@ const Navbar = () => {
     <>
       <AppBar sx={{ background: "#063970" }}>
         <Toolbar>
-          <AddBusinessRoundedIcon sx={{ transform: "scale(2)" }} />
+          <Typography sx={{ fontSize: "2rem", paddingLeft: "5%" }}>JAMAN</Typography>
           {isMatch ? (
             <>
-              <Typography sx={{ fontSize: "2rem", paddingLeft: "10%" }}>JAMAN</Typography>
+              
               <Drawer />
             </>
           ) : (

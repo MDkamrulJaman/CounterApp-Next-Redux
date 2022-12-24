@@ -1,34 +1,48 @@
 import React, { useState } from "react";
-import {
-  Drawer,
-  IconButton,
-  List,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Tab,
-} from "@mui/material";
+import { Drawer, IconButton, List, ListItemIcon, ListItemText } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-const pages = ["EXPRIENCE", "ABOUT", "CONTACT"];
+import Link from "next/link";
+import { AddCircleOutlineOutlined, SubjectOutlined } from "@mui/icons-material";
+
 const Sidebar = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
+  const pages = [
+    {
+      text: "Home",
+      icon: <SubjectOutlined />,
+      path: "/",
+    },
+    {
+      text: "About",
+      icon: <SubjectOutlined  />,
+      path: "/about",
+    },
+    {
+      text: "Exprience",
+      icon: <AddCircleOutlineOutlined  />,
+      path: "/exprience",
+    },
+    {
+      text: "Contact",
+      icon: <AddCircleOutlineOutlined  />,
+      path: "/contact",
+    },
+  ];
+
   return (
     <>
-      <Drawer
-        sx={{ backgroun: "red" }}
-        anchor="left"
-        open={openDrawer}
-        onClose={() => setOpenDrawer(false)}
-      >
+      <Drawer anchor="left" open={openDrawer} onClose={() => setOpenDrawer(false)}>
         <List>
-          <Tab href="/" label="HOME" />
           {pages.map((page, index) => (
-            <ListItemButton href={`/${page.toLowerCase()}`} key={index}>
-              <ListItemIcon>
-                <ListItemText>{page}</ListItemText>
-              </ListItemIcon>
-            </ListItemButton>
+            <Link
+              style={{ textDecoration: "none" }}
+              href={`${page.path.toLowerCase()}`}
+              key={index}
+            >
+              <ListItemIcon>{pages.icon}</ListItemIcon>
+              <ListItemText sx={{ p: "10px" }}>{page.text.toUpperCase()}</ListItemText>
+            </Link>
           ))}
         </List>
       </Drawer>

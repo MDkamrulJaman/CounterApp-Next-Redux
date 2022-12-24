@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import {
   AppBar,
+  Box,
   Button,
-  Tab,
   Tabs,
   Toolbar,
   Typography,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import AddBusinessRoundedIcon from "@mui/icons-material/AddBusinessRounded";
+
 import Drawer from "./Sidebar";
+import Link from "next/link";
+import { DisplaySettings } from "@mui/icons-material";
 
 const Navbar = () => {
   const [value, setValue] = useState();
@@ -18,30 +20,80 @@ const Navbar = () => {
 
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
 
+  const pages = [
+    {
+      text: "Home",
+      // icon: <SubjectOutlined />,
+      path: "/",
+    },
+    {
+      text: "About",
+      // icon: <SubjectOutlined color="secondary" />,
+      path: "/about",
+    },
+    {
+      text: "Exprience",
+      // icon: <AddCircleOutlineOutlined color="secondary" />,
+      path: "/exprience",
+    },
+    {
+      text: "Contact",
+      // icon: <AddCircleOutlineOutlined color="secondary" />,
+      path: "/contact",
+    },
+  ];
+
   return (
     <>
       <AppBar sx={{ background: "#063970" }}>
         <Toolbar>
-          <Typography sx={{ fontSize: "2rem", paddingLeft: "5%" }}>JAMAN</Typography>
+          <Link href="/" style={{ color: "white", textDecoration: "none" }}>
+            <Typography sx={{ fontSize: "2rem", paddingLeft: "5%" }}>JAMAN</Typography>
+          </Link>
           {isMatch ? (
             <>
-              
               <Drawer />
             </>
           ) : (
             <>
-              <Tabs
+              <Box
+                flexWrap="nowrap"
+                justifyContent="center"
                 sx={{ marginLeft: "auto" }}
                 indicatorColor="secondary"
                 textColor="inherit"
                 value={value}
                 onChange={(e, value) => setValue(value)}
               >
-                <Tab href="/" label="Home" />
-                <Tab href="/exprience" label="exprience" />
-                <Tab href="/about" label="About " />
-                <Tab href="/contact" label="Contact" />
-              </Tabs>
+                <Tabs>
+                  {pages.map((page, index) => (
+                    <Link
+                      href={page.path}
+                      key={index}
+                      style={{ color: "white", textDecoration: "none" }}
+                    >
+                      <Typography sx={{ fontWeight: "light", color: "white", p: "20px" }}>
+                        {page.text.toUpperCase()}
+                      </Typography>
+                    </Link>
+                  ))}
+
+                  {/* <Link href="/" style={{ color: "white", textDecoration: "none" }}>
+                    <Tab label="Home" />
+                    </Link>
+                    <Link href="/about" style={{ color: "white", textDecoration: "none" }}>
+                    <Tab label="About" />
+                    </Link>
+                    
+                    <Link href="/exprience" style={{ color: "white", textDecoration: "none" }}>
+                    <Tab label="exprience" />
+                    </Link>
+                    <Link href="/contact" style={{ color: "white", textDecoration: "none" }}>
+                    <Tab label="contact" />
+                  </Link> */}
+                </Tabs>
+              </Box>
+
               <Button sx={{ marginLeft: "auto" }} variant="contained">
                 Login
               </Button>

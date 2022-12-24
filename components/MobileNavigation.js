@@ -6,11 +6,11 @@ import RestoreIcon from "@mui/icons-material/Restore";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
-export default function SimpleBottomNavigation() {
+export default function MobileNavigation() {
   const [value, setValue] = React.useState(0);
 
   return (
-    <Box sx={{ width: 500}}>
+    <Box sx={{ width: 500 }}>
       <BottomNavigation
         showLabels
         value={value}
@@ -19,8 +19,8 @@ export default function SimpleBottomNavigation() {
         }}
       >
         <BottomNavigationAction href="/" label="Recents" icon={<RestoreIcon />} />
-        <BottomNavigationAction  href="/" label="Favorites" icon={<FavoriteIcon />} />
-        <BottomNavigationAction   href="/" label="Nearby" icon={<LocationOnIcon />} />
+        <BottomNavigationAction href="/" label="Favorites" icon={<FavoriteIcon />} />
+        <BottomNavigationAction href="/" label="Nearby" icon={<LocationOnIcon />} />
       </BottomNavigation>
     </Box>
   );

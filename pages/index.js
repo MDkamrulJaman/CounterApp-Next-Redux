@@ -1,17 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Counter } from "../features/counter/Counter";
 import Title from "../components/Title";
-import DarkMode from "../components/DarkMode";
 
-const index = () => {
+
+
+const Home = () => {
   return (
     <>
+
       <Title title="Home" />
       <Counter />
 
-      <DarkMode />
     </>
   );
 };
 
-export default index;
+export default Home;

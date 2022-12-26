@@ -77,29 +77,21 @@ const Navbar = () => {
                       </Typography>
                     </Link>
                   ))}
-
-                  {/* <Link href="/" style={{ color: "white", textDecoration: "none" }}>
-                    <Tab label="Home" />
-                    </Link>
-                    <Link href="/about" style={{ color: "white", textDecoration: "none" }}>
-                    <Tab label="About" />
-                    </Link>
-                    
-                    <Link href="/exprience" style={{ color: "white", textDecoration: "none" }}>
-                    <Tab label="exprience" />
-                    </Link>
-                    <Link href="/contact" style={{ color: "white", textDecoration: "none" }}>
-                    <Tab label="contact" />
-                  </Link> */}
                 </Tabs>
               </Box>
 
-              <Button sx={{ marginLeft: "auto" }} variant="contained">
-                Login
-              </Button>
-              <Button sx={{ marginLeft: "10px" }} variant="contained">
-                SignUp
-              </Button>
+              <Box flexWrap="nowrap" justifyContent="center" sx={{ marginLeft: "auto" }}>
+                <Link href="/login">
+                  <Button sx={{ marginLeft: "auto", textDecoration: "none" }} variant="contained">
+                    Login
+                  </Button>
+                </Link>
+                <Link href="/signup">
+                  <Button sx={{ marginLeft: "20px", textDecoration: "none" }} variant="contained">
+                    SignUp
+                  </Button>
+                </Link>
+              </Box>
             </>
           )}
         </Toolbar>

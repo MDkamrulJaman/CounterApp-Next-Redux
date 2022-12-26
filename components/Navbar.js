@@ -86,11 +86,14 @@ const Navbar = () => {
                     Login
                   </Button>
                 </Link>
-                <Link href="/signup">
-                  <Button sx={{ marginLeft: "20px", textDecoration: "none" }} variant="contained">
-                    SignUp
-                  </Button>
-                </Link>
+
+                <Button
+                  href="/signup"
+                  sx={{ marginLeft: "20px", textDecoration: "none" }}
+                  variant="contained"
+                >
+                  SignUp
+                </Button>
               </Box>
             </>
           )}

@@ -11,6 +11,7 @@ import {
 
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import { Box } from "@mui/material";
 
 export function Counter() {
   const count = useSelector((state) => state.counter.value);
@@ -18,7 +19,7 @@ export function Counter() {
 
   return (
     <>
-      <div>
+     <Box style={{paddingTop:100,justifyContent:"center",}}> <div>
         <div className="appName">
           <h1>
             <b>Counter App</b>
@@ -64,7 +65,7 @@ export function Counter() {
             Reset Value
           </Button>
         </Stack>
-      </div>
+      </div></Box>
     </>
   );
 }

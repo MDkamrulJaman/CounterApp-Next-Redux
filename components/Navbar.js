@@ -81,17 +81,9 @@ const Navbar = () => {
               </Box>
 
               <Box flexWrap="nowrap" justifyContent="center" sx={{ marginLeft: "auto" }}>
-                <Link href="/login">
-                  <Button sx={{ marginLeft: "auto", textDecoration: "none" }} variant="contained">
-                    Login
-                  </Button>
-                </Link>
+                <Button variant="contained">Login</Button>
 
-                <Button
-                  href="/signup"
-                  sx={{ marginLeft: "20px", textDecoration: "none" }}
-                  variant="contained"
-                >
+                <Button sx={{ marginLeft: "20px" }} variant="contained">
                   SignUp
                 </Button>
               </Box>
